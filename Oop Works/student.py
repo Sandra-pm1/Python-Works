@@ -12,7 +12,15 @@ class Student:
     course:str
     gender:str
 
-    def set_student(self,name,age,id,contact,course,gender):
+    def __init__(self,name,age,id,contact,course,gender):
+
+        # self.name = instance variable
+        # "construtor" is user to initialize instance variable in a class
+        # constructor have unique names
+        #       java       => classname()
+        #       javascript => constructor()
+        #       python     => __init__()
+        
         self.name=name
         self.age=age
         self.id=id
@@ -25,6 +33,5 @@ class Student:
 
 # creating objects
 
-student_instance=Student()
-student_instance.set_student("sandra",24,100001,9947743089,"python django","female")
+student_instance=Student("sandra",24,100001,9947743089,"python django","female")
 student_instance.display_student()
